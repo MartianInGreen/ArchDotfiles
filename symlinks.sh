@@ -43,5 +43,8 @@ ln -s ~/.arch/dotfiles/home_config/alacritty/alacritty.toml ~/.config/alacritty/
 
 # Cosmic
 mv ~/.config/cosmic ~/.old_files/.config/
-mkdir -p ~/.config/cosmic
-ln -s ~/.arch/dotfiles/home_config/cosmic ~/.config/cosmic
+ln -s ~/.arch/dotfiles/home_config/cosmic ~/.config/
+
+# Fastfetch
+mv ~/.config/fastfetch ~/.old_files/.config/fastfetch
+ln -s ~/.arch/dotfiles/home_config/fastfetch ~/.config/

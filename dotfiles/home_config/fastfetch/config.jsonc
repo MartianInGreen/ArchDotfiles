@@ -1,0 +1,66 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "modules": [
+      "title",
+      "separator",
+
+      "os",
+      "host",
+      "kernel",
+      "uptime",
+      "datetime",
+      "packages",
+      "shell",
+      "separator",
+
+      "display",
+      "de",
+      "wm",
+      "wmtheme",
+      "theme",
+      "icons",
+      "font",
+      "terminal",
+      "terminalfont",
+      "separator",
+
+      "cpu",
+      {
+        "type": "gpu",
+        "driverSpecific": true
+      },
+      {
+        "type": "command",
+        "key": "Driver Version",
+        "text": "nvidia-smi | grep \"Driver Version\" | awk '{print $3}'"
+      },
+      "memory",
+      "swap",
+      "cpuusage",
+      "processes",
+      "disk",
+      "battery",
+      "poweradapter",
+      "separator",
+
+      {
+        "type": "localip",
+        "showIpv4": true,
+        "showIpv6": true
+      },
+      {
+        "type": "command",
+        "key": "Mullvad",
+        "text": "curl -s https://am.i.mullvad.net/json | jq -r '\"Connected: \\(.mullvad_exit_ip), \\(.mullvad_exit_ip_hostname), \\(.mullvad_server_type)\"'"
+      },
+      // "publicip",
+      "wifi",
+      "bluetooth",
+      "separator",
+
+      "locale",
+      
+      "break",
+      "colors"
+    ]
+  }

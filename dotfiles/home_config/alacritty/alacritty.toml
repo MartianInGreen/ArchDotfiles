@@ -3,3 +3,7 @@ opacity = 0.85
 
 [env]
 TERM = "alacritty"
+
+[terminal.shell]
+program = "/usr/bin/zsh"
+args = ["-c", "zsh -i -c 'fastfetch'; exec zsh"]
