@@ -1,0 +1,21 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	email = github@rennersh.eu
+	name = MartianInGreen
+	signingkey = 7B258008D55E59DE
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[core]
+	editor = vim
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/

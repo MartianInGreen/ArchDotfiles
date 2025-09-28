@@ -1,0 +1,30 @@
+{
+    (
+        modifiers: [],
+        key: "Print",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "f",
+    ): Spawn("dolphin"),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "t",
+    ): Spawn("alacritty"),
+    (
+        modifiers: [],
+        key: "Print",
+        description: Some("Print"),
+    ): Spawn("cosmic-screenshot && wl-paste | satty -f - -o \"$HOME/Pictures/Screenshots/$(date \"+%Y-%m-%d_%H:%M:%S\").png\" --copy-command \"wl-copy\""),
+    (
+        modifiers: [
+            Alt,
+        ],
+        key: "Print",
+        description: Some("Print"),
+    ): Spawn("cosmic-screenshot"),
+}

@@ -1,0 +1,9 @@
+(
+    rules: "",
+    model: "pc105+inet",
+    layout: "us",
+    variant: "altgr-intl",
+    options: Some("terminate:ctrl_alt_bksp,lv3:ralt_switch"),
+    repeat_delay: 600,
+    repeat_rate: 25,
+)
