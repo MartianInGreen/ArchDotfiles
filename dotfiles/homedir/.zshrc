@@ -103,6 +103,7 @@ alias enable-laptop-display="cosmic-randr enable eDP-1"
 alias start-default-network="sudo virsh net-list --all && sudo virsh net-start default"
 
 alias start-on-gpu="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
+alias load-nvidia-driver="sudo modprobe nvidia-drm"
 
 alias giac="gitui && gia"
 alias edit="cursor --ozone-platform-hint=wayland"
@@ -120,6 +121,8 @@ PATH=$PATH:$HOME/.local/bin:$HOME/.scripts
 # ---------------------------
 
 alias nvidia-driver-version="nvidia-smi | grep \"Driver Version\" | awk '{print $3}'"
+
+alias update="archconfig system-update"
 
 # ---------------------------
 # Input Fixes

@@ -1,9 +1,11 @@
 Some(([
+    "com.system76.CosmicPanelLauncherButton",
     "com.system76.CosmicPanelWorkspacesButton",
     "com.system76.CosmicPanelAppButton",
     "com.system76.CosmicAppletWorkspaces",
 ], [
     "dev.DBrox.CosmicPrivacyIndicator",
+    "io.github.cosmic_utils.cosmic-ext-applet-clipboard-manager",
     "wkeys-applet",
     "dev.dominiccgeh.CosmicAppletEmojiSelector",
     "com.system76.CosmicAppletInputSources",

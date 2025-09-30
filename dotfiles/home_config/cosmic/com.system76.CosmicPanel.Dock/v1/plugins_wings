@@ -1,7 +1,3 @@
-Some(([
-    "com.system76.CosmicPanelLauncherButton",
-    "com.system76.CosmicPanelWorkspacesButton",
-    "com.system76.CosmicPanelAppButton",
-], [
+Some(([], [
     "com.system76.CosmicAppletMinimize",
 ]))
