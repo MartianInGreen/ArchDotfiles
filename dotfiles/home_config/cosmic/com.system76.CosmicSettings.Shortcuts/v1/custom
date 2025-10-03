@@ -27,4 +27,9 @@
         key: "Print",
         description: Some("Print"),
     ): Spawn("cosmic-screenshot"),
+    (
+        modifiers: [],
+        key: "XF86Calculator",
+        description: Some("Calculator"),
+    ): Spawn("zen-browser https://mathda.com/calculator"),
 }

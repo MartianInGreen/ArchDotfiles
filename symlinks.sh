@@ -9,10 +9,16 @@ mkdir -p ~/.old_files/.config
 
 mkdir -p ~/.old_files/.config/alacritty
 
+mkdir -p ~/.old_files/.cargo
+mkdir -p ~/.cargo
+
 # ---------------------------------------------------------
 # Misc symlinks
 # ---------------------------------------------------------
 
+# .cargo
+mv ~/.cargo/config.toml ~/.old_files/.cargo/config.toml
+ln -s ~/.arch/dotfiles/homedir/.cargo/config.toml ~/.cargo/config.toml
 
 # ---------------------------------------------------------
 # Home directory symlinks

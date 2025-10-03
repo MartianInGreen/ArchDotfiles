@@ -169,6 +169,30 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 fi
 
 # ---------------------------
+# SSH Agent 
+# ---------------------------
+
+# Reuse ssh-agent across sessions
+SSH_ENV="$HOME/.ssh/agent-environment"
+
+function start_agent {
+    echo "Starting new SSH agent..."
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    chmod 600 "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+    /usr/bin/ssh-add ~/.secrets/id_rsa
+}
+
+if [ -f "${SSH_ENV}" ]; then
+    . "${SSH_ENV}" > /dev/null
+    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+        start_agent;
+    }
+else
+    start_agent;
+fi
+
+# ---------------------------
 # Functions
 # ---------------------------
 
